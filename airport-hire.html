@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Hire | Pearl Holiday Tours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">Pearl <span class="accent">Holiday Tours</span></span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#destinations">Destinations</a></li>
+            <li><a href="airport-hire.html">Airport Hire</a></li>
+            <li><a href="vehicle-fleet.html">Vehicle Fleet</a></li>
+            <li><a href="tour-packages.html">Tour Packages</a></li>
+            <li><a href="#airport-booking" class="btn-primary">Book Now</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="airport-hero">
+    <div class="airport-hero-overlay">
+        <h1>Airport <span>Hire</span></h1>
+        <p>Luxury Airport Transfers Across Sri Lanka</p>
+        <p class="airport-sub">24/7 Airport Pickup & Drop Services • Professional Drivers • Comfortable Vehicles</p>
+
+        <div class="airport-buttons">
+            <a href="#airport-booking" class="btn-primary lg">Book Airport Transfer</a>
+            <a href="vehicle-fleet.html" class="btn-secondary lg">View Vehicles</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container text-center">
+        <h2 class="section-title">Airport <span class="accent">Services</span></h2>
+        <p>Reliable private airport hire services for individuals, families and groups.</p>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <img src="assets/airport-colombo.png" alt="Airport to Colombo">
+                <div class="package-content">
+                    <h3>Airport to Colombo</h3>
+                    <p>Comfortable private transfers from Bandaranaike International Airport to Colombo City.</p>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/airport-south.png" alt="Airport to South Coast">
+                <div class="package-content">
+                    <h3>Airport to South Coast</h3>
+                    <p>Airport hire services to Galle, Bentota, Hikkaduwa, Mirissa and nearby areas.</p>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/airport-custom.png" alt="Custom Airport Hire">
+                <div class="package-content">
+                    <h3>Custom Airport Hire</h3>
+                    <p>Book a private vehicle from the airport to any destination in Sri Lanka.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-darker">
+    <div class="container text-center">
+        <h2 class="section-title">Why <span class="accent">Choose Us?</span></h2>
+
+        <div class="airport-feature-grid">
+            <div class="airport-feature">🚖<h3>Professional Drivers</h3></div>
+            <div class="airport-feature">🕒<h3>24/7 Service</h3></div>
+            <div class="airport-feature">⭐<h3>Luxury Vehicles</h3></div>
+            <div class="airport-feature">🛡️<h3>Safe & Comfortable</h3></div>
+            <div class="airport-feature">💰<h3>Fixed Pricing</h3></div>
+            <div class="airport-feature">⏳<h3>Free Waiting Time</h3></div>
+        </div>
+    </div>
+</section>
+
+<section class="section airport-booking-section" id="airport-booking">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Book <span class="accent">Airport Hire</span></h2>
+            <p>Fill the form and send your airport hire request directly to WhatsApp.</p>
+        </div>
+
+        <div class="airport-booking-card">
+            <input type="text" id="airportName" placeholder="Full Name">
+            <input type="email" id="airportEmail" placeholder="Email Address">
+            <input type="tel" id="airportPhone" placeholder="Phone Number">
+            <input type="text" id="flightNo" placeholder="Flight Number">
+
+            <div class="airport-two-col">
+                <input type="date" id="airportArrivalDate">
+                <input type="time" id="airportArrivalTime">
+            </div>
+
+            <input type="text" id="pickupLocation" placeholder="Pickup Location">
+            <input type="text" id="destination" placeholder="Destination">
+
+            <div class="airport-two-col">
+                <select id="airportPassengers">
+                    <option value="">Passengers</option>
+                    <option>1-2</option>
+                    <option>3-5</option>
+                    <option>6-10</option>
+                    <option>10+</option>
+                </select>
+
+                <select id="airportVehicle">
+                    <option value="">Preferred Vehicle</option>
+                    <option>Car</option>
+                    <option>Van</option>
+                    <option>Luxury SUV</option>
+                </select>
+            </div>
+
+            <textarea id="airportNotes" placeholder="Additional Notes"></textarea>
+
+            <button class="btn-primary airport-submit" onclick="sendAirportBooking()">
+                Book on WhatsApp
+            </button>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

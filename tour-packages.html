@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages | Pearl Holiday Tours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">Pearl <span class="accent">Holiday Tours</span></span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#destinations">Destinations</a></li>
+            <li><a href="airport-hire.html">Airport Hire</a></li>
+            <li><a href="vehicle-fleet.html">Vehicle Fleet</a></li>
+            <li><a href="tour-packages.html" class="btn-primary">Book Now</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section packages-page">
+    <div class="container">
+        <div class="section-header text-center">
+            <h1 class="section-title">Our <span class="accent">Tour Packages</span></h1>
+            <p>Select your perfect Sri Lanka travel experience.</p>
+        </div>
+
+        <div class="packages-grid">
+
+            <div class="package-card">
+                <img src="assets/trip1.png" alt="Custom Trip 1">
+                <div class="package-content">
+                    <h3>Custom Trip 1</h3>
+                    <p>3 Day Tour</p>
+                    <p>Airport, Habarana, Anuradhapura, Polonnaruwa, Kandy, Nuwara Eliya, Ella, Yala National Park and Down South.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('custom1')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/trip2.png" alt="Custom Trip 2">
+                <div class="package-content">
+                    <h3>Custom Trip 2</h3>
+                    <p>3 Day Tour</p>
+                    <p>Airport, Down South, Yala National Park, Ella, Nuwara Eliya, Kandy, Polonnaruwa, Anuradhapura and Habarana.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('custom2')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/trip3.png" alt="Custom Trip 3">
+                <div class="package-content">
+                    <h3>Custom Trip 3</h3>
+                    <p>3 Day Beach Escape</p>
+                    <p>Discover the breathtaking beaches and coastal attractions of Trincomalee. Best time to visit: April – August.</p>
+                    <button class="btn-primary"onclick="openPackageDetails('custom3')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/colombo.png" alt="Colombo City Tour">
+                <div class="package-content">
+                    <h3>Colombo City Tour</h3>
+                    <p>1 Day Tour</p>
+                    <p>Explore Colombo city highlights, temples, colonial landmarks, shopping malls and cultural attractions.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('colombo')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/Anuradhapura.png" alt="Anuradhapura Tour">
+                <div class="package-content">
+                    <h3>Ancient City of Anuradhapura</h3>
+                    <p>1 Day Tour</p>
+                    <p>Discover Anuradhapura, Sri Lanka's first ancient capital, famous for sacred stupas and Buddhist heritage.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('anuradhapura')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/Polonnaruwa.png" alt="Polonnaruwa Tour">
+                <div class="package-content">
+                    <h3>Ancient City of Polonnaruwa</h3>
+                    <p>1 Day Tour</p>
+                    <p>Explore royal palaces, sacred temples and remarkable UNESCO World Heritage ruins.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('polonnaruwa')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/ella.jpg" alt="Ella Tour">
+                <div class="package-content">
+                    <h3>Ella Adventure Package</h3>
+                    <p>2 Days / 1 Night</p>
+                    <p>Ella, Nine Arches Bridge, Little Adam’s Peak, Ravana Falls and scenic train views.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('ella')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/sigiriya.png" alt="Sigiriya Tour">
+                <div class="package-content">
+                    <h3>Sigiriya Heritage Package</h3>
+                    <p>1 Day Tour</p>
+                    <p>Sigiriya Rock Fortress, Dambulla Cave Temple and cultural experiences.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('sigiriya')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/galle.png" alt="Galle Tour">
+                <div class="package-content">
+                    <h3>Galle Beach Package</h3>
+                    <p>1 Day Tour</p>
+                    <p>Galle Fort, Unawatuna Beach, sunset experience and coastal ride.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('galle')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/jaffna.png" alt="Jaffna Tour">
+                <div class="package-content">
+                    <h3>Jaffna Cultural Package</h3>
+                    <p>3 Day Tour</p>
+                    <p>Explore Jaffna Fort, Nallur Temple, Casuarina Beach and the unique culture of Northern Sri Lanka.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('jaffna')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/udawalawa.png" alt="Udawalawa Tour">
+                <div class="package-content">
+                    <h3>Udawalawa Wild Life Safari Package</h3>
+                    <p>1 Day Tour</p>
+                    <p>Enjoy elephant sightings, peaceful landscapes and an exciting safari adventure.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('udawalawa')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/yala.png" alt="Yala Tour">
+                <div class="package-content">
+                    <h3>Yala National Park Safari</h3>
+                    <p>1 Day Tour</p>
+                    <p>Explore Yala with leopards, elephants and spectacular wildlife.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('yala')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/kandy.jpg" alt="Kandy Tour">
+                <div class="package-content">
+                    <h3>Hill Country Escape</h3>
+                    <p>2 Day Tour</p>
+                    <p>Discover Kandy with sacred temples, scenic lakes and tea-covered hills.</p>
+                    <button class="btn-primary" onclick="openPackageDetails('kandy')">View Details</button>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="assets/adventure.png" alt="Adventure Package">
+                <div class="package-content">
+                    <h3>Adventure Package</h3>
+                    <p>
+                    Experience hiking, waterfalls, zipline, camping,
+                    river activities and thrilling outdoor adventures.
+                    </p>
+                    <button class="btn-primary" onclick="openPackageDetails('adventure')">View Details</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="adventureBookingModal" class="booking-modal">
+    <div class="booking-box">
+        <button class="close-booking" onclick="closeAdventureBooking()">×</button>
+
+        <div class="enquiry-header">
+            <h2>🏕️ ADVENTURE ENQUIRY</h2>
+            <p>Tell us your adventure preferences and we’ll contact you via WhatsApp</p>
+        </div>
+
+        <label>Full Name *</label>
+        <input type="text" id="advName" placeholder="Enter your full name">
+
+        <label>Phone Number *</label>
+        <input type="text" id="advPhone" placeholder="Your phone Number">
+
+        <label>Adventure Activity</label>
+        <select id="advActivity">
+            <option>All activities</option>
+            <option>Hiking & Trekking</option>
+            <option>Zipline Adventure</option>
+            <option>Waterfall Exploration</option>
+            <option>Camping Experience</option>
+            <option>Safari Adventure</option>
+            <option>Whale Watching</option>
+            <option>Surfing Experience</option>
+            <option>Scuba Diving & Snorkeling</option>
+            <option>Hot Air Balloon Ride</option>
+            <option>Village & Nature Walk</option>
+        </select>
+
+        <label>Adventure Places</label>
+        <select id="advPlaces">
+            <option>All Places</option>
+            <option>Adam's Peak (Sri Pada) - 2,243m | Hard | 5-7 Hours</option>
+            <option>Ella Rock - 1,350m | Moderate | 3-4 Hours</option>
+            <option>Little Adam's Peak - 1,141m | Easy | 1-2 Hours</option>
+            <option>Pidurangala Rock - 200m | Easy | 1 Hour</option>
+            <option>Knuckles Mountain Range - 1,900m | Hard | Full Day</option>
+            <option>Horton Plains & World's End - 2,100m | Moderate | 3-4 Hours</option>
+            <option>Lipton's Seat - 1,970m | Easy | 2-3 Hours</option>
+            <option>Narangala Mountain - 1,520m | Moderate | 4-5 Hours</option>
+            <option>Hanthana Mountain Range - 1,240m | Moderate | 3-5 Hours</option>
+            <option>Bible Rock (Bathalegala) - 798m | Moderate | 3-4 Hours</option>
+            <option>Alagalla Mountain - 1,140m | Moderate | 3-4 Hours</option>
+            <option>Kirigalpotta Mountain - 2,388m | Hard | 6-7 Hours</option>
+            <option>Thotupola Kanda - 2,357m | Moderate | 2-3 Hours</option>
+            <option>Manigala Mountain - 1,114m | Moderate | 3-4 Hours</option>
+            <option>Riverston Peak - 1,424m | Moderate | 2-3 Hours</option>
+            <option>Meemure Trek - 1,200m | Hard | Full Day</option>
+            <option>Dothalugala Nature Trail - 1,630m | Moderate | 2-3 Hours</option>
+            <option>Pidurutalagala - 2,524m | Hard | 5-6 Hours</option>
+            <option>Single Tree Hill - 2,100m | Easy | 1-2 Hours</option>
+            <option>Pekoe Trail (Multi-Stage Trek) - 1,000m-2,000m | Moderate | Half Day to Multi-Day</option>
+            <option>Flying Ravana Mega Zipline - Ella</option>
+            <option>Adventure Park Zipline - Belihuloya</option>
+            <option>Pekoe Trail Adventure Zipline - Nuwara Eliya</option>
+            <option>Diyaluma Falls - Koslanda</option>
+            <option>Bambarakanda Falls - Kalupahana</option>
+            <option>Ravana Falls - Ella</option>
+            <option>Dunhinda Falls - Badulla</option>
+            <option>Aberdeen Falls - Ginigathhena</option>
+            <option>Laxapana Falls - Hatton</option>
+            <option>Baker's Falls - Horton Plains</option>
+            <option>Devon Falls - Talawakele</option>
+            <option>Knuckles Camping - Kandy</option>
+            <option>Meemure Camping - Kandy</option>
+            <option>Horton Plains Camping - Nuwara Eliya</option>
+            <option>Riverston Camping - Matale</option>
+            <option>Belihuloya Camping - Ratnapura</option>
+            <option>Yala Camping - Tissamaharama</option>
+            <option>Gal Oya Camping - Ampara</option>
+            <option>Yala National Park Safari</option>
+            <option>Udawalawe National Park Safari</option>
+            <option>Wilpattu National Park Safari</option>
+            <option>Minneriya National Park Safari</option>
+            <option>Kaudulla National Park Safari</option>
+            <option>Gal Oya National Park Safari</option>
+            <option>Bundala National Park Safari</option>
+        </select>
+
+        <label>Preferred Date</label>
+        <input type="date" id="advDate">
+
+        <label>Number of People</label>
+        <select id="advPeople">
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3-5 People</option>
+            <option>6-10 People</option>
+            <option>10+ People</option>
+        </select>
+
+        <label>Additional Details</label>
+        <textarea id="advDetails" placeholder="Any special requests..."></textarea>
+
+        <button class="btn-primary submit-booking" onclick="sendAdventureBooking()">
+            Book Adventure on WhatsApp
+        </button>
+    </div>
+</div>
+
+<div id="detailsModal" class="details-modal">
+    <div class="details-box">
+        <span class="close-btn" onclick="closePackageDetails()">&times;</span>
+
+        <h2 id="packageTitle">Package Title</h2>
+        <p id="packageDuration">Duration</p>
+        <div id="packageDescription" class="package-description"></div>
+
+        <h3>Places to Visit</h3>
+        <ul id="packagePlaces"></ul>
+
+        <h3>Includes</h3>
+        <ul>
+            <li>Private transport</li>
+            <li>Professional driver</li>
+            <li>Comfortable vehicle</li>
+            <li>Pickup & drop-off support</li>
+        </ul>
+
+        <button class="btn-primary" onclick="openBookingFromDetails()">
+            Book on WhatsApp
+        </button>
+    </div>
+</div>
+
+<div id="bookingModal" class="booking-modal">
+    <div class="booking-box">
+        <button class="close-booking" onclick="closeBookingForm()">×</button>
+
+        <div class="enquiry-header">
+            <h2>💬 TOUR ENQUIRY</h2>
+            <p>Fill out the form below and we'll get back to you via WhatsApp</p>
+        </div>
+
+        <label>Full Name <span>*</span></label>
+        <div class="input-group">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="fullName" placeholder="Enter your full name">
+        </div>
+
+        <div class="two-col">
+            <div>
+                <label>Email Address</label>
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+            </div>
+
+            <div>
+                <label>Phone Number <span>*</span></label>
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" id="phone" placeholder="+94 71 689 7676">
+                </div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div>
+                <label>Arrival Date</label>
+                <div class="input-group">
+                    <i class="fa-regular fa-calendar"></i>
+                    <input type="date" id="arrivalDate">
+                </div>
+            </div>
+
+            <div>
+                <label>Departure Date</label>
+                <div class="input-group">
+                    <i class="fa-regular fa-calendar"></i>
+                    <input type="date" id="departureDate">
+                </div>
+            </div>
+        </div>
+
+        <label>Number of People</label>
+        <div class="input-group">
+            <i class="fa-solid fa-users"></i>
+            <select id="people">
+                <option>Select Person</option>
+                <option>1 Person</option>
+                <option>2 People</option>
+                <option>3 People</option>
+                <option>4 People</option>
+                <option>5 People</option>
+                <option>6 People</option>
+                <option>7 People</option>
+                <option>8 People</option>
+                <option>9 People</option>
+                <option>10+ People</option>
+            </select>
+        </div>
+
+        <label>Preferred Vehicle (Optional)</label>
+        <div class="input-group">
+            <i class="fa-solid fa-car"></i>
+            <input type="text" id="vehiclePreference" placeholder="Search by vehicle name or enter custom preference...">
+        </div>
+
+        <label>Tour Route & Additional Details (Optional)</label>
+        <div class="input-group textarea-group">
+            <i class="fa-regular fa-note-sticky"></i>
+            <textarea id="details" placeholder="Describe your desired tour route, destinations you want to visit, or any special requests..."></textarea>
+        </div>
+
+        <button class="btn-primary submit-booking" onclick="sendBookingWhatsApp()">
+            Book on WhatsApp
+        </button>
+    </div>
+</div>
+
+<section class="dream-tour-section">
+    <div class="container">
+        <div class="dream-tour-box">
+            <h2>🌍 Plan Your Dream Tour</h2>
+            <p>Create your own Sri Lankan adventure! Tell us where you'd like to go and we'll design a customized tour package specially for you.</p>
+
+            <div class="dream-form">
+                <input type="text" id="dreamName" placeholder="Your Full Name">
+                <input type="tel" id="dreamPhone" placeholder="Phone Number">
+
+                <label for="dreamDate">📅 Preferred Travel Date</label>
+                <input type="date" id="dreamDate">
+
+                <input type="text" id="dreamPlaces" placeholder="Places you want to visit (e.g. Ella, Kandy, Yala)">
+
+                <select id="dreamDays">
+                    <option value="">Select Duration</option>
+                    <option>1 Day</option>
+                    <option>2 Days / 1 Night</option>
+                    <option>3 Days / 2 Nights</option>
+                    <option>4 Days / 3 Nights</option>
+                    <option>5+ Days</option>
+                </select>
+
+                <textarea id="dreamDetails" placeholder="Tell us your requirements, preferred hotels, activities or special requests..."></textarea>
+
+                <button class="btn-primary" onclick="sendDreamTour()">
+                    Plan on WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

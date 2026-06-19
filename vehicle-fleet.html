@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Fleet | Pearl Holiday Tours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">Pearl <span class="accent">Holiday Tours</span></span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#destinations">Destinations</a></li>
+            <li><a href="airport-hire.html">Airport Hire</a></li>
+            <li><a href="vehicle-fleet.html">Vehicle Fleet</a></li>
+            <li><a href="tour-packages.html">Tour Packages</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="section packages-page">
+    <div class="container">
+        <div class="section-header text-center">
+            <h1 class="section-title">Our <span class="accent">Vehicle Fleet</span></h1>
+            <p>Select the perfect vehicle for your Sri Lanka journey.</p>
+        </div>
+
+        <div class="fleet-filter glass-card">
+            <select id="passengerFilter" onchange="filterVehicles()">
+                <option value="">All Passengers</option>
+                <option value="1-3">1-3 Passengers</option>
+                <option value="4-6">4-6 Passengers</option>
+                <option value="7-10">7-10 Passengers</option>
+                <option value="10+">10+ Passengers</option>
+            </select>
+
+            <select id="typeFilter" onchange="filterVehicles()">
+                <option value="">All Types</option>
+                <option value="car">Car</option>
+                <option value="suv">SUV</option>
+                <option value="van">Van</option>
+                <option value="Jeep">Jeep</option>
+                <option value="bus">Bus</option>
+                <option value="luxury">Luxury</option>
+            </select>
+
+            <select id="gearFilter" onchange="filterVehicles()">
+                <option value="">All Gears</option>
+                <option value="automatic">Automatic</option>
+                <option value="manual">Manual</option>
+            </select>
+
+            <select id="fuelFilter" onchange="filterVehicles()">
+                <option value="">All Fuels</option>
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="hybrid">Hybrid</option>
+                <option value="electric">Electric</option>
+            </select>
+        </div>
+
+        <div class="vehicle-grid">
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="car" data-gear="automatic" data-fuel="hybrid"
+                 data-images="assets/vehicles/prius/prius.jpg,assets/vehicles/prius/2.jpg,assets/vehicles/prius/3.jpg">
+                <img src="assets/vehicles/prius/prius.jpg" alt="Toyota Prius">
+                <h3>Toyota Prius</h3>
+                <p>Car • Hybrid • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Prius', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="car" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/aqua/aqua.jpg,assets/vehicles/aqua/2.jpg,assets/vehicles/aqua/3.jpg">
+                <img src="assets/vehicles/aqua/aqua.jpg" alt="Toyota Aqua">
+                <h3>Toyota Aqua</h3>
+                <p>Mini Car • Petrol • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Aqua', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="4-6" data-type="suv" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/honda-vezel/suv.jpg,assets/vehicles/honda-vezel/2.jpg,assets/vehicles/honda-vezel/3.jpg">
+                <img src="assets/vehicles/honda-vezel/suv.jpg" alt="Honda Vezel">
+                <h3>Honda Vezel</h3>
+                <p>SUV • Comfortable • Automatic • 4-6 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Honda Vezel', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="car" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/axsio/1.jpeg,assets/vehicles/axsio/2.jpeg,assets/vehicles/axsio/3.jpeg">
+                <img src="assets/vehicles/axsio/axsio.jpeg" alt="Toyota Axsio">
+                <h3>Toyota Axsio</h3>
+                <p>car • Comfortable • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Axsio', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="car" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/bezza/bezza.jpeg,assets/vehicles/bezza/1.jpeg,assets/vehicles/bezza/2.jpeg,assets/vehicles/bezza/3.jpeg">
+                <img src="assets/vehicles/bezza/bezza.jpeg" alt="Perodua Bezza">
+                <h3>Perodua Bezza</h3>
+                <p>car • Comfortable • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Perodua Bezza', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="car" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/premio/premio.jpeg,assets/vehicles/premio/1.jpeg,assets/vehicles/premio/2.jpeg,assets/vehicles/premio/3.jpeg,assets/vehicles/premio/4.jpeg">
+                <img src="assets/vehicles/premio/premio.jpeg" alt="Toyota Premio">
+                <h3>Toyota Premio</h3>
+                <p>Luxury Car • Comfortable • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Premio', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="Car" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/bens/1.jpeg,assets/vehicles/bens/2.jpeg,assets/vehicles/bens/3.jpeg,assets/vehicles/bens/4.jpeg,assets/vehicles/bens/5.jpeg,assets/vehicles/bens/6.jpeg,assets/vehicles/bens/7.jpeg">
+                <img src="assets/vehicles/bens/Bens.jpeg" alt="Bens">
+                <h3>Bens</h3>
+                <p>Luxury Car • Comfortable • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Bens', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="4-6" data-type="SUV" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/glory/glory.jpeg,assets/vehicles/glory/1.jpeg,assets/vehicles/glory/2.jpeg">
+                <img src="assets/vehicles/glory/glory.jpeg" alt="DFSK Glory 580">
+                <h3>DFSK Glory 580</h3>
+                <p>SUV • Comfortable • Automatic • 4-6 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('DFSK Glory 580', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="4-6" data-type="Van" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/alphard/alphard.jpeg,assets/vehicles/alphard/2.jpeg,assets/vehicles/alphard/3.jpeg,assets/vehicles/alphard/4.jpeg,assets/vehicles/alphard/5.jpeg,assets/vehicles/alphard/6.jpeg,assets/vehicles/alphard/7.jpeg">
+                <img src="assets/vehicles/alphard/alphard.jpeg" alt="Toyota Alphard">
+                <h3>Toyota Alphard</h3>
+                <p>Luxury Van • Comfortable • Automatic • 4-6 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Alphard', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="7-10" data-type="van" data-gear="manual" data-fuel="diesel"
+                 data-images="assets/vehicles/kdh/kdh.jpg,assets/vehicles/kdh/2.jpg,assets/vehicles/kdh/3.jpg">
+                <img src="assets/vehicles/kdh/kdh.jpg" alt="Toyota KDH Van">
+                <h3>Toyota KDH Van</h3>
+                <p>Van • Diesel • Manual • 7-10 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota KDH Van', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="7-10" data-type="van" data-gear="manual" data-fuel="diesel"
+                 data-images="assets/vehicles/volkswagen/volkswagen.jpeg,assets/vehicles/volkswagen/2.jpeg,assets/vehicles/volkswagen/3.jpeg,assets/vehicles/volkswagen/4.jpeg">
+                <img src="assets/vehicles/volkswagen/volkswagen.jpeg" alt="Volkswagen Transporter T5">
+                <h3>Volkswagen Transporter T5</h3>
+                <p>Van • Diesel • Manual • 7-10 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Volkswagen Transporter T5', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="1-3" data-type="car" data-gear="automatic" data-fuel="petrol"
+                 data-images="assets/vehicles/hyundai/hyundai.jpeg,assets/vehicles/hyundai/1.jpeg,assets/vehicles/hyundai/2.jpeg,assets/vehicles/hyundai/3.jpeg">
+                <img src="assets/vehicles/hyundai/hyundai.jpeg" alt="Hyundai Grand i10">
+                <h3>Hyundai Grand i10</h3>
+                <p>car • Petrol • Automatic • 1-3 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Hyundai Grand i10', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="10+" data-type="van" data-gear="automatic" data-fuel="diesel"
+                 data-images="assets/vehicles/hiace/hiace.jpeg,assets/vehicles/hiace/1.jpeg,assets/vehicles/hiace/2.jpeg">
+                <img src="assets/vehicles/hiace/hiace.jpeg" alt="Toyota Hiace">
+                <h3>Toyota Hiace</h3>
+                <p>Van • Diesel • Automatic • 10+ Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Hiace', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="10+" data-type="van" data-gear="automatic" data-fuel="diesel"
+                 data-images="assets/vehicles/grandia/grandia.jpeg,assets/vehicles/grandia/1.jpeg,assets/vehicles/grandia/2.jpeg,assets/vehicles/grandia/3.jpeg">
+                <img src="assets/vehicles/grandia/grandia.jpeg" alt="Toyota Grandia">
+                <h3>Toyota Grandia</h3>
+                <p>Luxury Van • Diesel • Automatic • 10+ Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Grandia', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="7-10" data-type="van" data-gear="automatic" data-fuel="diesel"
+                 data-images="assets/vehicles/alphard1/alphard1.jpeg,assets/vehicles/alphard1/1.jpeg,assets/vehicles/alphard1/2.jpeg,assets/vehicles/alphard1/3.jpeg">
+                <img src="assets/vehicles/alphard1/alphard1.jpeg" alt="Toyota Alphard">
+                <h3>Toyota Alphard</h3>
+                <p>Luxury Van • Diesel • Automatic • 7-10 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Alphard', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="4-6" data-type="Jeep" data-gear="automatic" data-fuel="diesel"
+                 data-images="assets/vehicles/Prado/Prado.jpeg,assets/vehicles/prado/1.jpeg,assets/vehicles/prado/2.jpeg,assets/vehicles/prado/3.jpeg">
+                <img src="assets/vehicles/prado/prado.jpeg" alt="Land Cruiser Prado">
+                <h3>Land Cruiser Prado</h3>
+                <p>Jeep • Diesel • Automatic • 4-6 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Land Cruiser Prado', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="4-6" data-type="Jeep" data-gear="automatic" data-fuel="diesel"
+                 data-images="assets/vehicles/Prado250/Prado250.jpeg,assets/vehicles/prado250/1.jpeg,assets/vehicles/prado250/2.jpeg">
+                <img src="assets/vehicles/prado250/prado250.jpeg" alt="Land Cruiser Prado 250">
+                <h3>Land Cruiser Prado 250</h3>
+                <p>Jeep • Diesel • Automatic • 4-6 Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Land Cruiser Prado 250', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+            <div class="vehicle-card" data-passengers="10+" data-type="bus" data-gear="manual" data-fuel="diesel"
+                 data-images="assets/vehicles/coaster/1.jpeg,assets/vehicles/coaster/2.jpeg,assets/vehicles/coaster/3.jpeg">
+                <img src="assets/vehicles/coaster/coaster.jpg" alt="Toyota Coaster">
+                <h3>Toyota Coaster Bus</h3>
+                <p>Coaster Bus • Diesel • Manual • 10+ Passengers</p>
+                <button class="btn-primary"
+                onclick="openVehicleBooking('Toyota Coaster Bus', this)">
+                Book This Vehicle
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="vehicleBookingModal" class="vehicle-booking-modal">
+    <div class="vehicle-booking-box">
+        <button class="vehicle-close" onclick="closeVehicleBooking()">×</button>
+
+        <h2>Book <span id="selectedVehicleName">Vehicle</span></h2>
+        <p>Fill your details and send booking request via WhatsApp.</p>
+
+        <div class="vehicle-gallery">
+            <img id="mainVehicleImage" src="" alt="Vehicle Image">
+            <div id="vehicleThumbs" class="vehicle-thumbs"></div>
+        </div>
+
+        <input type="text" id="vehicleName" readonly>
+        <input type="text" id="customerName" placeholder="Full Name">
+        <input type="tel" id="customerPhone" placeholder="Phone Number">
+        <input type="email" id="customerEmail" placeholder="Email Address">
+
+        <div class="vehicle-two-col">
+            <input type="date" id="pickupDate">
+            <input type="time" id="pickupTime">
+        </div>
+
+        <input type="text" id="pickupPlace" placeholder="Pickup Location">
+        <input type="text" id="dropPlace" placeholder="Drop Location / Destination">
+
+        <select id="vehiclePassengers">
+            <option value="">Passengers</option>
+            <option>1-3 Passengers</option>
+            <option>4-6 Passengers</option>
+            <option>7-10 Passengers</option>
+            <option>10+ Passengers</option>
+        </select>
+
+        <select id="Service Type">
+            <option value="">Service Type</option>
+            <option>Tour Packages</option>
+            <option>Airport Hire/with driver</option>
+            <option>Airport Hire/without driver</option>
+        </select>
+
+        <textarea id="vehicleNotes" placeholder="Additional details or special requests"></textarea>
+
+        <button class="btn-primary vehicle-submit" onclick="sendVehicleBooking()">
+            Book on WhatsApp
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
